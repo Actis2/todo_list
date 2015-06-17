@@ -14,7 +14,7 @@ describe "Editing todo lists" do
 		visit "/todo_lists"
 		
 
-		within "#todo_list_#{todo_list.id}" do
+		within "#todo_list#{todo_list.id}" do
 			click_link "Edit"
 		end
 

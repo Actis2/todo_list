@@ -14,7 +14,7 @@ describe "Editing todo lists" do
 		visit "/todo_lists"
 		
 
-		within "#todo_list#{todo_list.id}" do
+		within "#todo_list_#{todo_list.id}" do
 			click_link "Edit"
 		end
 
@@ -47,7 +47,7 @@ describe "Editing todo lists" do
 		expect(page).to have_content("error")
 	end
 
-		it "displays an error with too short a title" do
+	it "displays an error with too short a title" do
 		update_todo_list todo_list: todo_list, title: "hi"
 		expect(page).to have_content("error")
 	end
